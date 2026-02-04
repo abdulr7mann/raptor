@@ -45,10 +45,11 @@ Plans:
   1. Running a scan against VAmPI produces zero false positives from HTTP 200 + fail body pattern (currently 10 findings from S06, S09, S13)
   2. The toolkit analyzes baseline responses and identifies per-API success/failure indicators before running security tests
   3. Test validation checks both HTTP status code AND response body structure, not status code alone
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: TBD
+- [ ] 02-01-PLAN.md -- Build ResponsePatternLearner with pre-scan learning pass and is_real_success() on BaseScenario
+- [ ] 02-02-PLAN.md -- Replace is_success_status with is_real_success in S06, S09, S13 and verify FP elimination
 
 ### Phase 3: Endpoint Classification
 **Goal**: The toolkit distinguishes public from protected endpoints and understands endpoint purpose, so it does not flag expected behavior as vulnerabilities
@@ -128,7 +129,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
 | 1. Evidence & Report Quality | 2/2 | Complete | 2026-02-04 |
-| 2. Response Pattern Learning | 0/TBD | Not started | - |
+| 2. Response Pattern Learning | 0/2 | Planned | - |
 | 3. Endpoint Classification | 0/TBD | Not started | - |
 | 4. Prerequisite-Aware Testing | 0/TBD | Not started | - |
 | 5. API Discovery & Profiling | 0/TBD | Not started | - |
