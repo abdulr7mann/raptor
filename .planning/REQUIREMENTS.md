@@ -78,13 +78,39 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (To be filled by roadmapper) | | |
+| DISC-01 | Phase 5: API Discovery & Profiling | Pending |
+| DISC-02 | Phase 2: Response Pattern Learning | Pending |
+| DISC-03 | Phase 3: Endpoint Classification | Pending |
+| DISC-04 | Phase 5: API Discovery & Profiling | Pending |
+| DISC-05 | Phase 5: API Discovery & Profiling | Pending |
+| DISC-06 | Phase 5: API Discovery & Profiling | Pending |
+| VALID-01 | Phase 3: Endpoint Classification | Pending |
+| VALID-02 | Phase 2: Response Pattern Learning | Pending |
+| VALID-03 | Phase 3: Endpoint Classification | Pending |
+| VALID-04 | Phase 4: Prerequisite-Aware Testing | Pending |
+| VALID-05 | Phase 7: Advanced Validation & Confidence | Pending |
+| VALID-06 | Phase 7: Advanced Validation & Confidence | Pending |
+| TEST-01 | Phase 6: Adaptive Test Execution | Pending |
+| TEST-02 | Phase 6: Adaptive Test Execution | Pending |
+| TEST-03 | Phase 6: Adaptive Test Execution | Pending |
+| TEST-04 | Phase 6: Adaptive Test Execution | Pending |
+| RPT-01 | Phase 1: Evidence & Report Quality | Pending |
+| RPT-02 | Phase 1: Evidence & Report Quality | Pending |
+| RPT-03 | Phase 1: Evidence & Report Quality | Pending |
+| RPT-04 | Phase 1: Evidence & Report Quality | Pending |
+| RPT-05 | Phase 7: Advanced Validation & Confidence | Pending |
+| FIX-01 | Phase 2: Response Pattern Learning | Pending |
+| FIX-02 | Phase 3: Endpoint Classification | Pending |
+| FIX-03 | Phase 3: Endpoint Classification | Pending |
+| FIX-04 | Phase 4: Prerequisite-Aware Testing | Pending |
+| FIX-05 | Phase 1: Evidence & Report Quality | Pending |
+| FIX-06 | Phase 1: Evidence & Report Quality | Pending |
 
 **Coverage:**
 - v1 requirements: 31 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 31 ⚠️
+- Mapped to phases: 31
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-04*
-*Last updated: 2026-02-04 after initial definition*
+*Last updated: 2026-02-04 after roadmap creation*
