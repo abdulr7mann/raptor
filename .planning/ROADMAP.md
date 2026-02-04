@@ -13,7 +13,7 @@ Transform the existing API pentest toolkit from a static scanner with a 31% fals
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Evidence & Report Quality** - Fix missing endpoints, evidence, deduplication, and HTML escaping in findings
-- [ ] **Phase 2: Response Pattern Learning** - Learn API success/failure indicators to eliminate HTTP 200 + fail body false positives
+- [x] **Phase 2: Response Pattern Learning** - Learn API success/failure indicators to eliminate HTTP 200 + fail body false positives
 - [ ] **Phase 3: Endpoint Classification** - Classify public vs protected endpoints and detect endpoint purpose to eliminate auth-related false positives
 - [ ] **Phase 4: Prerequisite-Aware Testing** - Check preconditions before running tests to eliminate nonsensical test false positives
 - [ ] **Phase 5: API Discovery & Profiling** - Probe APIs to detect auth scheme, architecture, and build unified API profile
@@ -49,7 +49,7 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md -- Build ResponsePatternLearner with pre-scan learning pass and is_real_success() on BaseScenario
-- [ ] 02-02-PLAN.md -- Replace is_success_status with is_real_success in S06, S09, S13 and verify FP elimination
+- [x] 02-02-PLAN.md -- Replace is_success_status with is_real_success in S06, S09, S13 and verify FP elimination
 
 ### Phase 3: Endpoint Classification
 **Goal**: The toolkit distinguishes public from protected endpoints and understands endpoint purpose, so it does not flag expected behavior as vulnerabilities
@@ -129,7 +129,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
 | 1. Evidence & Report Quality | 2/2 | Complete | 2026-02-04 |
-| 2. Response Pattern Learning | 1/2 | In progress | - |
+| 2. Response Pattern Learning | 2/2 | Complete | 2026-02-04 |
 | 3. Endpoint Classification | 0/TBD | Not started | - |
 | 4. Prerequisite-Aware Testing | 0/TBD | Not started | - |
 | 5. API Discovery & Profiling | 0/TBD | Not started | - |

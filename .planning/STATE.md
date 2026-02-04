@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Accuracy -- findings must be real vulnerabilities, not false positives
-**Current focus:** Phase 2: Response Pattern Learning (plan 01 complete, plan 02 remaining)
+**Current focus:** Phase 3: Endpoint Classification (Phase 2 complete, ready to plan Phase 3)
 
 ## Current Position
 
-Phase: 2 of 7 (Response Pattern Learning)
-Plan: 1 of 2 in current phase
-Status: In progress
-Last activity: 2026-02-04 -- Completed 02-01-PLAN.md (response pattern learner)
+Phase: 2 of 7 (Response Pattern Learning) -- COMPLETE
+Plan: 2 of 2 in current phase -- COMPLETE
+Status: Phase complete
+Last activity: 2026-02-04 -- Completed 02-02-PLAN.md (scenario integration + FP elimination verified)
 
-Progress: [###.......] ~21%
+Progress: [####......] ~29%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
+- Total plans completed: 4
 - Average duration: 4min
-- Total execution time: 11min
+- Total execution time: 14min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-evidence-report-quality | 2/2 | 8min | 4min |
-| 02-response-pattern-learning | 1/2 | 3min | 3min |
+| 02-response-pattern-learning | 2/2 | 6min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (3min), 01-02 (3min), 01-01 (5min)
+- Last 5 plans: 02-02 (3min), 02-01 (3min), 01-02 (3min), 01-01 (5min)
 - Trend: stable/improving
 
 *Updated after each plan completion*
@@ -55,6 +55,8 @@ Recent decisions affecting current work:
 - [02-01]: POST/PUT/DELETE endpoints only probed without auth to avoid state mutation.
 - [02-01]: is_real_success() defaults to True when no pattern learned (no regression).
 - [02-01]: is_success_status() preserved unchanged for backward compatibility.
+- [02-02]: Targeted is_real_success replacement at 11 attack-validation sites; baseline/precondition checks preserved as is_success_status.
+- [02-02]: S13 type_confusion, oversized_payload, encoding_attacks kept as is_success_status -- they check server errors/infrastructure limits, not body-level success.
 
 ### Pending Todos
 
@@ -62,11 +64,11 @@ None yet.
 
 ### Blockers/Concerns
 
-- Python version compatibility: jsonschema 4.26.0 requires Python >= 3.10. Verify project minimum before Phase 2.
-- Diverse test targets: Only VAmPI available. Need additional API targets to avoid overfitting. Identify during Phase 2-3 execution.
+- Python version compatibility: jsonschema 4.26.0 requires Python >= 3.10. Verify project minimum before Phase 3.
+- Diverse test targets: Only VAmPI available. Need additional API targets to avoid overfitting. Identify during Phase 3-4 execution.
 
 ## Session Continuity
 
 Last session: 2026-02-04
-Stopped at: Completed 02-01-PLAN.md. Ready for 02-02-PLAN.md (replace is_success_status with is_real_success in S06, S09, S13).
+Stopped at: Completed 02-02-PLAN.md. Phase 2 complete. Ready to plan Phase 3: Endpoint Classification.
 Resume file: None
