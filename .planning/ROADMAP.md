@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Evidence & Report Quality** - Fix missing endpoints, evidence, deduplication, and HTML escaping in findings
 - [x] **Phase 2: Response Pattern Learning** - Learn API success/failure indicators to eliminate HTTP 200 + fail body false positives
 - [x] **Phase 3: Endpoint Classification** - Classify public vs protected endpoints and detect endpoint purpose to eliminate auth-related false positives
-- [ ] **Phase 4: Prerequisite-Aware Testing** - Check preconditions before running tests to eliminate nonsensical test false positives
+- [x] **Phase 4: Prerequisite-Aware Testing** - Check preconditions before running tests to eliminate nonsensical test false positives
 - [ ] **Phase 5: API Discovery & Profiling** - Probe APIs to detect auth scheme, architecture, and build unified API profile
 - [ ] **Phase 6: Adaptive Test Execution** - Select and adjust tests based on API profile for intelligent, targeted scanning
 - [ ] **Phase 7: Advanced Validation & Confidence** - Baseline comparison, multi-signal validation, and confidence-level classification of findings
@@ -77,8 +77,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 04-01-PLAN.md -- Build PrerequisiteDetector with rate limit/CORS/CSP detection, gate S02 header bypass, wire into runner
-- [ ] 04-02-PLAN.md -- Gate S07/S11 CORS bypass tests, add "Not Applicable" section to HTML report
+- [x] 04-01-PLAN.md -- Build PrerequisiteDetector with rate limit/CORS/CSP detection, gate S02 header bypass, wire into runner
+- [x] 04-02-PLAN.md -- Gate S07/S11 CORS bypass tests, add "Not Applicable" section to HTML report
 
 ### Phase 5: API Discovery & Profiling
 **Goal**: The toolkit probes an API to discover its authentication scheme, architecture type, and builds a reusable profile that captures everything learned
@@ -133,7 +133,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 1. Evidence & Report Quality | 2/2 | Complete | 2026-02-04 |
 | 2. Response Pattern Learning | 2/2 | Complete | 2026-02-04 |
 | 3. Endpoint Classification | 2/2 | Complete | 2026-02-04 |
-| 4. Prerequisite-Aware Testing | 0/2 | Not started | - |
+| 4. Prerequisite-Aware Testing | 2/2 | Complete | 2026-02-04 |
 | 5. API Discovery & Profiling | 0/TBD | Not started | - |
 | 6. Adaptive Test Execution | 0/TBD | Not started | - |
 | 7. Advanced Validation & Confidence | 0/TBD | Not started | - |
