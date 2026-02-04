@@ -60,10 +60,11 @@ Plans:
   2. Login endpoint returning auth_token is not flagged as data exposure (currently 1 FP from S08)
   3. Test results are validated against endpoint classification -- auth tests skip public endpoints, data exposure tests account for endpoint purpose
   4. Endpoint classification uses OpenAPI security definitions when available and falls back to path pattern heuristics
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] 03-01-PLAN.md -- Build EndpointClassifier with three-tier classification, add classification fields to Endpoint, wire into runner
+- [ ] 03-02-PLAN.md -- Integrate classification into S07 and S08 to skip irrelevant tests and eliminate 5 FPs
 
 ### Phase 4: Prerequisite-Aware Testing
 **Goal**: The toolkit checks whether a test's preconditions exist before running it, so it does not flag bypass of nonexistent controls
