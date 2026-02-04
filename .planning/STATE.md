@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-04)
 ## Current Position
 
 Phase: 1 of 7 (Evidence & Report Quality)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-02-04 -- Roadmap created with 7 phases covering 31 requirements
+Plan: 2 of 2 in current phase (01-02 complete)
+Status: In progress
+Last activity: 2026-02-04 -- Completed 01-02-PLAN.md (Jinja2 report generator + dedup)
 
-Progress: [..........] 0%
+Progress: [#.........] ~5%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: 3min
+- Total execution time: 3min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-evidence-report-quality | 1/2 | 3min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: -
-- Trend: -
+- Last 5 plans: 01-02 (3min)
+- Trend: baseline
 
 *Updated after each plan completion*
 
@@ -45,6 +45,10 @@ Recent decisions affecting current work:
 - [Roadmap]: 7 phases derived from requirement dependencies, not research's 3-phase suggestion. Research combined too much into single phases, losing verifiable delivery boundaries.
 - [Roadmap]: Phase 1 starts with reporting fixes (no new capabilities needed) to establish clean output before measuring FP elimination.
 - [Roadmap]: FIX requirements distributed to the phases that implement the capability fixing them, not grouped into a separate "fixes" phase.
+- [01-02]: HttpLexer used for both request and response evidence highlighting (simpler than separate lexers).
+- [01-02]: Evidence HTML pre-rendered in Python via _format_evidence_html() returning Markup, not via Jinja2 filter.
+- [01-02]: Deduplication key is (title, endpoint) tuple -- first occurrence kept, duplicates silently dropped.
+- [01-02]: Evidence bodies never truncated -- removed [:2000] from Evidence.to_dict().
 
 ### Pending Todos
 
@@ -57,6 +61,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-04
-Stopped at: Roadmap created, ready to plan Phase 1
+Last session: 2026-02-04T13:20:38Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
