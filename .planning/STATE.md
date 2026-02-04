@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Accuracy -- findings must be real vulnerabilities, not false positives
-**Current focus:** Phase 4 in progress. Plan 01 complete, plan 02 next.
+**Current focus:** Phase 4 complete. All existing plans executed. Ready for Phase 5.
 
 ## Current Position
 
 Phase: 4 of 7 (Prerequisite-Aware Testing)
-Plan: 1 of 2 in current phase
-Status: In progress
-Last activity: 2026-02-04 -- Completed 04-01-PLAN.md (prerequisite detection + S02 FP gating)
+Plan: 2 of 2 in current phase
+Status: Phase complete
+Last activity: 2026-02-04 -- Completed 04-02-PLAN.md (CORS gating + report Not Applicable section)
 
-Progress: [########..] ~88% (7/8 existing plans)
+Progress: [##########] 100% (8/8 existing plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: 3min
-- Total execution time: 23min
+- Total execution time: 25min
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [########..] ~88% (7/8 existing plans)
 | 01-evidence-report-quality | 2/2 | 8min | 4min |
 | 02-response-pattern-learning | 2/2 | 6min | 3min |
 | 03-endpoint-classification | 2/2 | 6min | 3min |
-| 04-prerequisite-aware-testing | 1/2 | 3min | 3min |
+| 04-prerequisite-aware-testing | 2/2 | 5min | 2.5min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (3min), 03-02 (3min), 03-01 (3min), 02-02 (3min), 02-01 (3min)
+- Last 5 plans: 04-02 (2min), 04-01 (3min), 03-02 (3min), 03-01 (3min), 02-02 (3min)
 - Trend: stable at 3min/plan
 
 *Updated after each plan completion*
@@ -67,6 +67,9 @@ Recent decisions affecting current work:
 - [04-01]: Three-state DetectionStatus (PRESENT/ABSENT/UNCERTAIN) -- UNCERTAIN means bypass tests still run (conservative).
 - [04-01]: Only header_bypass_attempt is gated; burst_requests, response_time_degradation, rate_limit_header_check remain ungated (detection tests).
 - [04-01]: PrerequisiteChecker runs after classification and before scenario loop.
+- [04-02]: String prefix convention ("Precondition not met:") for filtering prerequisite skips -- no model changes needed.
+- [04-02]: Not Applicable section placed between Findings and Test Results in HTML report.
+- [04-02]: S11._test_security_headers() deliberately not gated -- missing headers IS the finding.
 
 ### Pending Todos
 
@@ -74,11 +77,11 @@ None yet.
 
 ### Blockers/Concerns
 
-- Python version compatibility: jsonschema 4.26.0 requires Python >= 3.10. Verify project minimum before Phase 4.
-- Diverse test targets: Only VAmPI available. Need additional API targets to avoid overfitting. Identify during Phase 4 execution.
+- Python version compatibility: jsonschema 4.26.0 requires Python >= 3.10. Verify project minimum before Phase 5.
+- Diverse test targets: Only VAmPI available. Need additional API targets to avoid overfitting. Identify during Phase 5 execution.
 
 ## Session Continuity
 
 Last session: 2026-02-04
-Stopped at: Completed 04-01-PLAN.md. Phase 4 plan 02 next.
+Stopped at: Completed 04-02-PLAN.md. Phase 4 complete. Phase 5 next.
 Resume file: None
