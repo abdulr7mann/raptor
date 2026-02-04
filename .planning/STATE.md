@@ -10,27 +10,27 @@ See: .planning/PROJECT.md (updated 2026-02-04)
 ## Current Position
 
 Phase: 1 of 7 (Evidence & Report Quality)
-Plan: 2 of 2 in current phase (01-02 complete)
-Status: In progress
-Last activity: 2026-02-04 -- Completed 01-02-PLAN.md (Jinja2 report generator + dedup)
+Plan: 2 of 2 in current phase (both complete)
+Status: Phase complete
+Last activity: 2026-02-04 -- Completed 01-01-PLAN.md (decompose aggregate findings)
 
-Progress: [#.........] ~5%
+Progress: [##........] ~14%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 3min
-- Total execution time: 3min
+- Total plans completed: 2
+- Average duration: 4min
+- Total execution time: 8min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-evidence-report-quality | 1/2 | 3min | 3min |
+| 01-evidence-report-quality | 2/2 | 8min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (3min)
+- Last 5 plans: 01-02 (3min), 01-01 (5min)
 - Trend: baseline
 
 *Updated after each plan completion*
@@ -45,6 +45,8 @@ Recent decisions affecting current work:
 - [Roadmap]: 7 phases derived from requirement dependencies, not research's 3-phase suggestion. Research combined too much into single phases, losing verifiable delivery boundaries.
 - [Roadmap]: Phase 1 starts with reporting fixes (no new capabilities needed) to establish clean output before measuring FP elimination.
 - [Roadmap]: FIX requirements distributed to the phases that implement the capability fixing them, not grouped into a separate "fixes" phase.
+- [01-01]: Collect-then-emit pattern for threshold-gated findings preserves original threshold logic while producing per-endpoint output.
+- [01-01]: S11 security_headers restructured from header-first to endpoint-first loop for natural per-endpoint findings.
 - [01-02]: HttpLexer used for both request and response evidence highlighting (simpler than separate lexers).
 - [01-02]: Evidence HTML pre-rendered in Python via _format_evidence_html() returning Markup, not via Jinja2 filter.
 - [01-02]: Deduplication key is (title, endpoint) tuple -- first occurrence kept, duplicates silently dropped.
@@ -61,6 +63,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-04T13:20:38Z
-Stopped at: Completed 01-02-PLAN.md
+Last session: 2026-02-04T13:21:16Z
+Stopped at: Completed 01-01-PLAN.md -- Phase 1 fully complete
 Resume file: None
