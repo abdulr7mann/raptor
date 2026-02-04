@@ -89,11 +89,11 @@ Plans:
   2. The API profile is persisted to JSON and can be reused across scan runs without re-discovery
   3. Auth scheme detection works for Bearer tokens, API keys in headers, and session cookies (validated against at least one target per scheme)
   4. GraphQL APIs are detected and schema introspection is attempted when GraphQL architecture is identified
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: TBD
-- [ ] 05-02: TBD
+- [ ] 05-01-PLAN.md -- Build AuthDetector, ArchitectureDetector, and RequestBudget for auth scheme and architecture detection
+- [ ] 05-02-PLAN.md -- Build ApiProfiler with profile persistence and wire discovery into runner
 
 ### Phase 6: Adaptive Test Execution
 **Goal**: The toolkit uses the API profile to select only relevant tests for each endpoint and adjusts test parameters to match the target API
@@ -134,6 +134,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 2. Response Pattern Learning | 2/2 | Complete | 2026-02-04 |
 | 3. Endpoint Classification | 2/2 | Complete | 2026-02-04 |
 | 4. Prerequisite-Aware Testing | 2/2 | Complete | 2026-02-04 |
-| 5. API Discovery & Profiling | 0/TBD | Not started | - |
+| 5. API Discovery & Profiling | 0/2 | Planned | - |
 | 6. Adaptive Test Execution | 0/TBD | Not started | - |
 | 7. Advanced Validation & Confidence | 0/TBD | Not started | - |
