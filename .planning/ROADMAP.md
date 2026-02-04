@@ -31,11 +31,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Every finding includes captured HTTP request/response evidence (no empty evidence fields)
   3. No duplicate findings appear in the report (same title + endpoint produces one finding)
   4. HTML report can be opened in a browser without triggering XSS from response body content
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md -- Decompose aggregate findings in S01, S02, S05, S11 into per-endpoint findings with evidence
+- [ ] 01-02-PLAN.md -- Rewrite report generator with Jinja2 autoescape, Pygments highlighting, deduplication
 
 ### Phase 2: Response Pattern Learning
 **Goal**: The toolkit learns how each API communicates success vs failure, so HTTP 200 + fail body is correctly identified as a failed test
@@ -127,7 +127,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
-| 1. Evidence & Report Quality | 0/TBD | Not started | - |
+| 1. Evidence & Report Quality | 0/2 | Planned | - |
 | 2. Response Pattern Learning | 0/TBD | Not started | - |
 | 3. Endpoint Classification | 0/TBD | Not started | - |
 | 4. Prerequisite-Aware Testing | 0/TBD | Not started | - |
