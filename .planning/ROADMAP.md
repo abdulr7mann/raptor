@@ -48,7 +48,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md -- Build ResponsePatternLearner with pre-scan learning pass and is_real_success() on BaseScenario
+- [x] 02-01-PLAN.md -- Build ResponsePatternLearner with pre-scan learning pass and is_real_success() on BaseScenario
 - [ ] 02-02-PLAN.md -- Replace is_success_status with is_real_success in S06, S09, S13 and verify FP elimination
 
 ### Phase 3: Endpoint Classification
@@ -129,7 +129,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
 | 1. Evidence & Report Quality | 2/2 | Complete | 2026-02-04 |
-| 2. Response Pattern Learning | 0/2 | Planned | - |
+| 2. Response Pattern Learning | 1/2 | In progress | - |
 | 3. Endpoint Classification | 0/TBD | Not started | - |
 | 4. Prerequisite-Aware Testing | 0/TBD | Not started | - |
 | 5. API Discovery & Profiling | 0/TBD | Not started | - |

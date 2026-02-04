@@ -5,33 +5,34 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Accuracy -- findings must be real vulnerabilities, not false positives
-**Current focus:** Phase 1 complete, ready for Phase 2: Response Pattern Learning
+**Current focus:** Phase 2: Response Pattern Learning (plan 01 complete, plan 02 remaining)
 
 ## Current Position
 
-Phase: 1 of 7 (Evidence & Report Quality)
-Plan: 2 of 2 in current phase (both complete)
-Status: Phase complete
-Last activity: 2026-02-04 -- Completed 01-01-PLAN.md (decompose aggregate findings)
+Phase: 2 of 7 (Response Pattern Learning)
+Plan: 1 of 2 in current phase
+Status: In progress
+Last activity: 2026-02-04 -- Completed 02-01-PLAN.md (response pattern learner)
 
-Progress: [##........] ~14%
+Progress: [###.......] ~21%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
+- Total plans completed: 3
 - Average duration: 4min
-- Total execution time: 8min
+- Total execution time: 11min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-evidence-report-quality | 2/2 | 8min | 4min |
+| 02-response-pattern-learning | 1/2 | 3min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (3min), 01-01 (5min)
-- Trend: baseline
+- Last 5 plans: 02-01 (3min), 01-02 (3min), 01-01 (5min)
+- Trend: stable/improving
 
 *Updated after each plan completion*
 
@@ -51,6 +52,9 @@ Recent decisions affecting current work:
 - [01-02]: Evidence HTML pre-rendered in Python via _format_evidence_html() returning Markup, not via Jinja2 filter.
 - [01-02]: Deduplication key is (title, endpoint) tuple -- first occurrence kept, duplicates silently dropped.
 - [01-02]: Evidence bodies never truncated -- removed [:2000] from Evidence.to_dict().
+- [02-01]: POST/PUT/DELETE endpoints only probed without auth to avoid state mutation.
+- [02-01]: is_real_success() defaults to True when no pattern learned (no regression).
+- [02-01]: is_success_status() preserved unchanged for backward compatibility.
 
 ### Pending Todos
 
@@ -64,5 +68,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-04
-Stopped at: Phase 1 execution complete (verified). Ready for Phase 2.
+Stopped at: Completed 02-01-PLAN.md. Ready for 02-02-PLAN.md (replace is_success_status with is_real_success in S06, S09, S13).
 Resume file: None
