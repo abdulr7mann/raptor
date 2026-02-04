@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Evidence & Report Quality** - Fix missing endpoints, evidence, deduplication, and HTML escaping in findings
 - [x] **Phase 2: Response Pattern Learning** - Learn API success/failure indicators to eliminate HTTP 200 + fail body false positives
-- [ ] **Phase 3: Endpoint Classification** - Classify public vs protected endpoints and detect endpoint purpose to eliminate auth-related false positives
+- [x] **Phase 3: Endpoint Classification** - Classify public vs protected endpoints and detect endpoint purpose to eliminate auth-related false positives
 - [ ] **Phase 4: Prerequisite-Aware Testing** - Check preconditions before running tests to eliminate nonsensical test false positives
 - [ ] **Phase 5: API Discovery & Profiling** - Probe APIs to detect auth scheme, architecture, and build unified API profile
 - [ ] **Phase 6: Adaptive Test Execution** - Select and adjust tests based on API profile for intelligent, targeted scanning
@@ -64,7 +64,7 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md -- Build EndpointClassifier with three-tier classification, add classification fields to Endpoint, wire into runner
-- [ ] 03-02-PLAN.md -- Integrate classification into S07 and S08 to skip irrelevant tests and eliminate 5 FPs
+- [x] 03-02-PLAN.md -- Integrate classification into S07 and S08 to skip irrelevant tests and eliminate 5 FPs
 
 ### Phase 4: Prerequisite-Aware Testing
 **Goal**: The toolkit checks whether a test's preconditions exist before running it, so it does not flag bypass of nonexistent controls
@@ -131,7 +131,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 |-------|---------------|--------|-----------|
 | 1. Evidence & Report Quality | 2/2 | Complete | 2026-02-04 |
 | 2. Response Pattern Learning | 2/2 | Complete | 2026-02-04 |
-| 3. Endpoint Classification | 1/2 | In progress | - |
+| 3. Endpoint Classification | 2/2 | Complete | 2026-02-04 |
 | 4. Prerequisite-Aware Testing | 0/TBD | Not started | - |
 | 5. API Discovery & Profiling | 0/TBD | Not started | - |
 | 6. Adaptive Test Execution | 0/TBD | Not started | - |

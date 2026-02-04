@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Accuracy -- findings must be real vulnerabilities, not false positives
-**Current focus:** Phase 3: Endpoint Classification (Plan 01 complete, Plan 02 next)
+**Current focus:** Phase 3 complete. Phase 4: Prerequisite-Aware Testing next.
 
 ## Current Position
 
-Phase: 3 of 7 (Endpoint Classification)
-Plan: 1 of 2 in current phase
-Status: In progress
-Last activity: 2026-02-04 -- Completed 03-01-PLAN.md (EndpointClassifier infrastructure + runner wiring)
+Phase: 3 of 7 (Endpoint Classification) -- COMPLETE
+Plan: 2 of 2 in current phase -- COMPLETE
+Status: Phase complete
+Last activity: 2026-02-04 -- Completed 03-02-PLAN.md (S07/S08 classification integration, 5 FPs eliminated)
 
-Progress: [#####.....] ~36%
+Progress: [######....] ~43%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
+- Total plans completed: 6
 - Average duration: 3min
-- Total execution time: 17min
+- Total execution time: 20min
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [#####.....] ~36%
 |-------|-------|-------|----------|
 | 01-evidence-report-quality | 2/2 | 8min | 4min |
 | 02-response-pattern-learning | 2/2 | 6min | 3min |
-| 03-endpoint-classification | 1/2 | 3min | 3min |
+| 03-endpoint-classification | 2/2 | 6min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (3min), 02-02 (3min), 02-01 (3min), 01-02 (3min), 01-01 (5min)
+- Last 5 plans: 03-02 (3min), 03-01 (3min), 02-02 (3min), 02-01 (3min), 01-02 (3min)
 - Trend: stable at 3min/plan
 
 *Updated after each plan completion*
@@ -61,6 +61,8 @@ Recent decisions affecting current work:
 - [03-01]: Auth-endpoint path detection runs before OpenAPI security tier -- purpose-based classification is independent of security requirement.
 - [03-01]: Default classification is PROTECTED (conservative -- assume auth needed unless positive signal).
 - [03-01]: _get_raw_spec() re-loads input file via InputDetector rather than caching during parse_input().
+- [03-02]: Only auth-related S07 tests skip public endpoints; non-auth tests (undocumented methods, CORS, debug) unchanged.
+- [03-02]: EXPECTED_AUTH_FIELDS on S08 class, not BaseScenario -- scenario-specific constant.
 
 ### Pending Todos
 
@@ -68,11 +70,11 @@ None yet.
 
 ### Blockers/Concerns
 
-- Python version compatibility: jsonschema 4.26.0 requires Python >= 3.10. Verify project minimum before Phase 3.
-- Diverse test targets: Only VAmPI available. Need additional API targets to avoid overfitting. Identify during Phase 3-4 execution.
+- Python version compatibility: jsonschema 4.26.0 requires Python >= 3.10. Verify project minimum before Phase 4.
+- Diverse test targets: Only VAmPI available. Need additional API targets to avoid overfitting. Identify during Phase 4 execution.
 
 ## Session Continuity
 
 Last session: 2026-02-04
-Stopped at: Completed 03-01-PLAN.md. Plan 02 (S07/S08 integration) ready to execute.
+Stopped at: Completed 03-02-PLAN.md. Phase 3 complete. Phase 4 (Prerequisite-Aware Testing) ready.
 Resume file: None
