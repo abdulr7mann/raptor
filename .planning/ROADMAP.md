@@ -12,7 +12,7 @@ Transform the existing API pentest toolkit from a static scanner with a 31% fals
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Evidence & Report Quality** - Fix missing endpoints, evidence, deduplication, and HTML escaping in findings
+- [x] **Phase 1: Evidence & Report Quality** - Fix missing endpoints, evidence, deduplication, and HTML escaping in findings
 - [ ] **Phase 2: Response Pattern Learning** - Learn API success/failure indicators to eliminate HTTP 200 + fail body false positives
 - [ ] **Phase 3: Endpoint Classification** - Classify public vs protected endpoints and detect endpoint purpose to eliminate auth-related false positives
 - [ ] **Phase 4: Prerequisite-Aware Testing** - Check preconditions before running tests to eliminate nonsensical test false positives
@@ -34,8 +34,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Decompose aggregate findings in S01, S02, S05, S11 into per-endpoint findings with evidence
-- [ ] 01-02-PLAN.md -- Rewrite report generator with Jinja2 autoescape, Pygments highlighting, deduplication
+- [x] 01-01-PLAN.md -- Decompose aggregate findings in S01, S02, S05, S11 into per-endpoint findings with evidence
+- [x] 01-02-PLAN.md -- Rewrite report generator with Jinja2 autoescape, Pygments highlighting, deduplication
 
 ### Phase 2: Response Pattern Learning
 **Goal**: The toolkit learns how each API communicates success vs failure, so HTTP 200 + fail body is correctly identified as a failed test
@@ -127,7 +127,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
-| 1. Evidence & Report Quality | 0/2 | Planned | - |
+| 1. Evidence & Report Quality | 2/2 | Complete | 2026-02-04 |
 | 2. Response Pattern Learning | 0/TBD | Not started | - |
 | 3. Endpoint Classification | 0/TBD | Not started | - |
 | 4. Prerequisite-Aware Testing | 0/TBD | Not started | - |
