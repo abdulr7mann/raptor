@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Accuracy -- findings must be real vulnerabilities, not false positives
-**Current focus:** Phase 3: Endpoint Classification (Phase 2 complete, ready to plan Phase 3)
+**Current focus:** Phase 3: Endpoint Classification (Plan 01 complete, Plan 02 next)
 
 ## Current Position
 
-Phase: 2 of 7 (Response Pattern Learning) -- COMPLETE
-Plan: 2 of 2 in current phase -- COMPLETE
-Status: Phase complete
-Last activity: 2026-02-04 -- Completed 02-02-PLAN.md (scenario integration + FP elimination verified)
+Phase: 3 of 7 (Endpoint Classification)
+Plan: 1 of 2 in current phase
+Status: In progress
+Last activity: 2026-02-04 -- Completed 03-01-PLAN.md (EndpointClassifier infrastructure + runner wiring)
 
-Progress: [####......] ~29%
+Progress: [#####.....] ~36%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 4min
-- Total execution time: 14min
+- Total plans completed: 5
+- Average duration: 3min
+- Total execution time: 17min
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [####......] ~29%
 |-------|-------|-------|----------|
 | 01-evidence-report-quality | 2/2 | 8min | 4min |
 | 02-response-pattern-learning | 2/2 | 6min | 3min |
+| 03-endpoint-classification | 1/2 | 3min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (3min), 02-01 (3min), 01-02 (3min), 01-01 (5min)
-- Trend: stable/improving
+- Last 5 plans: 03-01 (3min), 02-02 (3min), 02-01 (3min), 01-02 (3min), 01-01 (5min)
+- Trend: stable at 3min/plan
 
 *Updated after each plan completion*
 
@@ -57,6 +58,9 @@ Recent decisions affecting current work:
 - [02-01]: is_success_status() preserved unchanged for backward compatibility.
 - [02-02]: Targeted is_real_success replacement at 11 attack-validation sites; baseline/precondition checks preserved as is_success_status.
 - [02-02]: S13 type_confusion, oversized_payload, encoding_attacks kept as is_success_status -- they check server errors/infrastructure limits, not body-level success.
+- [03-01]: Auth-endpoint path detection runs before OpenAPI security tier -- purpose-based classification is independent of security requirement.
+- [03-01]: Default classification is PROTECTED (conservative -- assume auth needed unless positive signal).
+- [03-01]: _get_raw_spec() re-loads input file via InputDetector rather than caching during parse_input().
 
 ### Pending Todos
 
@@ -70,5 +74,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-04
-Stopped at: Completed 02-02-PLAN.md. Phase 2 complete. Ready to plan Phase 3: Endpoint Classification.
+Stopped at: Completed 03-01-PLAN.md. Plan 02 (S07/S08 integration) ready to execute.
 Resume file: None

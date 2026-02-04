@@ -63,7 +63,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md -- Build EndpointClassifier with three-tier classification, add classification fields to Endpoint, wire into runner
+- [x] 03-01-PLAN.md -- Build EndpointClassifier with three-tier classification, add classification fields to Endpoint, wire into runner
 - [ ] 03-02-PLAN.md -- Integrate classification into S07 and S08 to skip irrelevant tests and eliminate 5 FPs
 
 ### Phase 4: Prerequisite-Aware Testing
@@ -131,7 +131,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 |-------|---------------|--------|-----------|
 | 1. Evidence & Report Quality | 2/2 | Complete | 2026-02-04 |
 | 2. Response Pattern Learning | 2/2 | Complete | 2026-02-04 |
-| 3. Endpoint Classification | 0/TBD | Not started | - |
+| 3. Endpoint Classification | 1/2 | In progress | - |
 | 4. Prerequisite-Aware Testing | 0/TBD | Not started | - |
 | 5. API Discovery & Profiling | 0/TBD | Not started | - |
 | 6. Adaptive Test Execution | 0/TBD | Not started | - |
