@@ -7,3 +7,4 @@ colorama>=0.4.6
 prance[openapi-spec-validator]>=25.0.0
 openapi-spec-validator>=0.7.0
 pygments>=2.19.0
+deepdiff>=8.0.0
