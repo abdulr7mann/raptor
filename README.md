@@ -5,11 +5,6 @@
 
 An adaptive API security testing toolkit that learns before it strikes. It discovers authentication schemes, classifies endpoints, and executes OWASP-based security tests with high accuracy and minimal false positives. Works with REST, GraphQL, and spec-less APIs.
 
-```diff
-- Only use this tool on APIs you have authorization to test.
-- Unauthorized security testing is illegal.
-```
-
 ## Features
 
 - **Auto-Discovery**: Detects auth schemes (Bearer, API key, OAuth2, session cookies), API architecture (REST/GraphQL), and endpoint classification
@@ -118,4 +113,8 @@ For spec-less mode, Raptor uses [Kiterunner](https://github.com/assetnote/kiteru
 Manual install (optional):
 ```bash
 python scripts/setup_kiterunner.py
+```
+```diff
+- Only use this tool on APIs you have authorization to test.
+- Unauthorized security testing is illegal.
 ```
