@@ -11,9 +11,11 @@ An adaptive API security testing toolkit that learns before it strikes. It disco
 - **Spec-less Mode**: Just provide a URL - discovers OpenAPI specs or fuzzes endpoints with Kiterunner
 - **Response Learning**: Analyzes success/failure patterns to eliminate HTTP 200 + fail body false positives
 - **Smart Filtering**: Skips irrelevant tests (no rate limit bypass tests when no rate limiting exists)
-- **13 OWASP Tests**: Token reuse, IDOR, injection, privilege escalation, mass assignment, and more
+- **Path Parameter Injection**: Detects dynamic path parameters (`/users/v1/{username}`) and tests for SQLi/BOLA
+- **13 OWASP Tests**: Token reuse, IDOR, injection, privilege escalation, mass assignment, user enumeration, and more
 - **Confidence Levels**: Findings classified as CONFIRMED, LIKELY, or UNCERTAIN with validation signals
 - **Evidence Capture**: Full HTTP request/response with syntax highlighting in HTML reports
+- **Auto-Update**: Automatically pulls latest changes from git on startup (disable with `--no-update`)
 
 ## Installation
 
@@ -52,6 +54,11 @@ python run_pentest.py --input swagger.json --config pentest.yaml --scenarios s01
 python run_pentest.py --input swagger.json --config pentest.yaml --fast
 ```
 
+### Skip auto-update check
+```bash
+python run_pentest.py --input swagger.json --config pentest.yaml --no-update
+```
+
 ## Config Example
 
 ```yaml
@@ -75,12 +82,12 @@ scenarios:
 |----|----------|-------------|
 | S01 | Token Reuse | Tests for improper token invalidation |
 | S02 | Rate Limiting | Detects missing or bypassable rate limits |
-| S03 | IDOR | Insecure direct object reference testing |
-| S04 | Injection | SQL, NoSQL, command injection tests |
-| S05 | Privilege Escalation | Vertical/horizontal access violations |
+| S03 | IDOR | Insecure direct object reference (path usernames, unauthorized password change) |
+| S04 | Injection | SQL, NoSQL, command, SSTI injection via path/query/body params |
+| S05 | Auth Hijacking | JWT attacks, user enumeration via login responses |
 | S06 | Function Auth | Broken function-level authorization |
 | S07 | Access Controls | Authentication bypass attempts |
-| S08 | Data Exposure | Sensitive data in responses |
+| S08 | Data Exposure | Sensitive data in responses, mass assignment detection |
 | S09 | Business Logic | Flow manipulation and abuse |
 | S10 | Mass Assignment | Property injection via excess fields |
 | S11 | Security Misconfig | Headers, CORS, debug endpoints |
