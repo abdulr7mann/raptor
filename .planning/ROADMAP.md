@@ -104,10 +104,12 @@ Plans:
   2. Tests use the correct authentication headers, content types, and success criteria discovered from the API profile
   3. The toolkit handles JSON, XML, and plain text response formats without crashing or producing malformed findings
   4. Each test-endpoint pair has a relevance score and tests below the configured threshold are skipped with logged reason
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 06-01: TBD
+- [ ] 06-01-PLAN.md -- Build ScenarioApplicability dataclass, ResponseFormatHandler, and RelevanceCalculator
+- [ ] 06-02-PLAN.md -- Add APPLICABILITY declarations to BaseScenario and all 13 scenarios
+- [ ] 06-03-PLAN.md -- Wire applicability filtering into runner, add --relevance-threshold and --fast CLI flags
 
 ### Phase 7: Advanced Validation & Confidence
 **Goal**: Findings carry confidence levels backed by multiple validation signals, so users can distinguish confirmed vulnerabilities from uncertain indicators
@@ -135,5 +137,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 3. Endpoint Classification | 2/2 | Complete | 2026-02-04 |
 | 4. Prerequisite-Aware Testing | 2/2 | Complete | 2026-02-04 |
 | 5. API Discovery & Profiling | 2/2 | Complete | 2026-02-05 |
-| 6. Adaptive Test Execution | 0/TBD | Not started | - |
+| 6. Adaptive Test Execution | 0/3 | Not started | - |
 | 7. Advanced Validation & Confidence | 0/TBD | Not started | - |
