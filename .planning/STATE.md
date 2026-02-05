@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Accuracy -- findings must be real vulnerabilities, not false positives
-**Current focus:** Phase 4 complete and verified. Phase 5: API Discovery & Profiling next.
+**Current focus:** Phase 5 (API Discovery & Profiling) in progress.
 
 ## Current Position
 
-Phase: 4 of 7 (Prerequisite-Aware Testing) -- COMPLETE (verified)
-Plan: 2 of 2 in current phase -- COMPLETE
-Status: Phase complete, verified 12/12 must-haves
-Last activity: 2026-02-04 -- Phase 4 verified, all plans executed
+Phase: 5 of 7 (API Discovery & Profiling)
+Plan: 1 of 2 in current phase -- COMPLETE
+Status: In progress
+Last activity: 2026-02-05 -- Completed 05-01-PLAN.md (Detection Engine)
 
-Progress: [######....] ~57% (4/7 phases complete)
+Progress: [#########.] ~90% (9/10 plans complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
+- Total plans completed: 9
 - Average duration: 3min
-- Total execution time: 25min
+- Total execution time: 29min
 
 **By Phase:**
 
@@ -31,9 +31,10 @@ Progress: [######....] ~57% (4/7 phases complete)
 | 02-response-pattern-learning | 2/2 | 6min | 3min |
 | 03-endpoint-classification | 2/2 | 6min | 3min |
 | 04-prerequisite-aware-testing | 2/2 | 5min | 2.5min |
+| 05-api-discovery-profiling | 1/2 | 4min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 04-02 (2min), 04-01 (3min), 03-02 (3min), 03-01 (3min), 02-02 (3min)
+- Last 5 plans: 05-01 (4min), 04-02 (2min), 04-01 (3min), 03-02 (3min), 03-01 (3min)
 - Trend: stable at 3min/plan
 
 *Updated after each plan completion*
@@ -70,6 +71,10 @@ Recent decisions affecting current work:
 - [04-02]: String prefix convention ("Precondition not met:") for filtering prerequisite skips -- no model changes needed.
 - [04-02]: Not Applicable section placed between Findings and Test Results in HTML report.
 - [04-02]: S11._test_security_headers() deliberately not gated -- missing headers IS the finding.
+- [05-01]: Swagger 2.0 type:'basic' mapped directly without scheme field check (differs from OpenAPI 3.x type:'http'+scheme:'basic').
+- [05-01]: GraphQL introspection POST allowed as read-only exception to no-mutation rule.
+- [05-01]: WWW-Authenticate parser uses simple regex matching for known schemes (Bearer, Basic, OAuth).
+- [05-01]: RequestBudget shared across all detection subsystems with 30-request default cap.
 
 ### Pending Todos
 
@@ -82,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-04
-Stopped at: Phase 4 complete and verified. Phase 5 (API Discovery & Profiling) ready.
+Last session: 2026-02-05
+Stopped at: Completed 05-01-PLAN.md. Phase 5 Plan 02 (ApiProfiler) ready.
 Resume file: None
