@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-04)
 ## Current Position
 
 Phase: 8 of 8 (Spec-less Auto Discovery)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-02-05 -- Completed 08-02-PLAN.md
+Plan: 3 of 3 in current phase
+Status: Phase complete
+Last activity: 2026-02-05 -- Completed 08-03-PLAN.md
 
-Progress: [##########] 100% + Phase 8 (18/19 plans complete)
+Progress: [####################] 100% (19/19 plans complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 18
+- Total plans completed: 19
 - Average duration: 3.5min
-- Total execution time: 68min
+- Total execution time: 71min
 
 **By Phase:**
 
@@ -34,10 +34,10 @@ Progress: [##########] 100% + Phase 8 (18/19 plans complete)
 | 05-api-discovery-profiling | 2/2 | 9min | 4.5min |
 | 06-adaptive-test-execution | 3/3 | 16min | 5.3min |
 | 07-advanced-validation-confidence | 3/3 | 7min | 2.3min |
-| 08-spec-less-auto-discovery | 2/3 | 6min | 3min |
+| 08-spec-less-auto-discovery | 3/3 | 9min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 08-02 (4min), 08-01 (2min), 07-03 (2min), 07-02 (3min), 07-01 (2min)
+- Last 5 plans: 08-03 (3min), 08-02 (4min), 08-01 (2min), 07-03 (2min), 07-02 (3min)
 - Trend: stable at 2-5min/plan
 
 *Updated after each plan completion*
@@ -105,6 +105,10 @@ Recent decisions affecting current work:
 - [08-02]: Conservative PROTECTED classification for all fuzzed endpoints.
 - [08-02]: 289 endpoints in wordlist - exceeds 200 minimum for broad coverage.
 - [08-02]: API response detection uses content-type + body heuristics.
+- [08-03]: Mutual exclusion for --input and --url (cannot use both).
+- [08-03]: URL stored as discovery_url in config to distinguish from base_url.
+- [08-03]: Temp file approach for discovered spec parsing reuses InputDetector flow.
+- [08-03]: Discovered spec content cached for _get_raw_spec() endpoint classification.
 
 ### Pending Todos
 
@@ -118,5 +122,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-05
-Stopped at: Completed 08-02-PLAN.md
+Stopped at: Completed 08-03-PLAN.md (Phase 8 complete, all phases complete)
 Resume file: None
