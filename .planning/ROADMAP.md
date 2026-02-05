@@ -19,6 +19,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 5: API Discovery & Profiling** - Probe APIs to detect auth scheme, architecture, and build unified API profile
 - [x] **Phase 6: Adaptive Test Execution** - Select and adjust tests based on API profile for intelligent, targeted scanning
 - [x] **Phase 7: Advanced Validation & Confidence** - Baseline comparison, multi-signal validation, and confidence-level classification of findings
+- [ ] **Phase 8: Spec-less Auto-Discovery** - Enable pentesting with just URL + credentials using Kiterunner for spec and endpoint discovery
 
 ## Phase Details
 
@@ -127,10 +128,27 @@ Plans:
 - [x] 07-02-PLAN.md -- Wire FindingValidator into ResponsePatternLearner, BaseScenario, and Runner
 - [x] 07-03-PLAN.md -- Update HTML report with confidence badges, explanations, and filter dropdown
 
+### Phase 8: Spec-less Auto-Discovery
+**Goal**: The toolkit can pentest APIs with just a URL and credentials -- it automatically discovers specs or endpoints using Kiterunner
+**Depends on**: Phase 5 (existing discovery infrastructure), Phase 6 (endpoint model compatibility)
+**Requirements**: DISC-07, DISC-08, DISC-09, DISC-10
+**Success Criteria** (what must be TRUE):
+  1. Running with `--url` (no `--input`) triggers automatic spec discovery at common paths (/openapi.json, /swagger.json, /api-docs, /graphql)
+  2. If a spec is found, it is downloaded, parsed, and used for testing (same as `--input` flow)
+  3. If no spec is found, Kiterunner endpoint fuzzing discovers API endpoints using API-aware wordlists
+  4. Discovered endpoints flow through existing classification, prerequisite detection, and testing pipeline unchanged
+  5. Graceful fallback to built-in wordlist when Kiterunner binary is not installed
+**Plans**: 3 plans
+
+Plans:
+- [ ] 08-01-PLAN.md -- Build SpecDiscoverer for auto-discovery at common paths
+- [ ] 08-02-PLAN.md -- Build EndpointFuzzer with Kiterunner integration and built-in wordlist fallback
+- [ ] 08-03-PLAN.md -- Update CLI to support --url mode, wire discovery into runner, add progress feedback
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
@@ -141,3 +159,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 5. API Discovery & Profiling | 2/2 | Complete | 2026-02-05 |
 | 6. Adaptive Test Execution | 3/3 | Complete | 2026-02-05 |
 | 7. Advanced Validation & Confidence | 3/3 | Complete | 2026-02-05 |
+| 8. Spec-less Auto-Discovery | 0/3 | Planned | — |
