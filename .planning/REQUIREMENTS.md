@@ -22,8 +22,8 @@ Requirements for adaptive enhancement release. Each maps to roadmap phases.
 - [x] **VALID-02**: Check both HTTP status AND response body for application-level failures (fix "HTTP 200 with fail message" false positives)
 - [x] **VALID-03**: Context-aware finding validation (login endpoints returning tokens is expected, not data exposure)
 - [x] **VALID-04**: Skip nonsensical tests (don't test rate limit bypass when no rate limiting exists)
-- [ ] **VALID-05**: Baseline comparison validation - compare test response against baseline for differential testing
-- [ ] **VALID-06**: Multi-signal finding validation - require 2+ independent indicators for CONFIRMED confidence
+- [x] **VALID-05**: Baseline comparison validation - compare test response against baseline for differential testing
+- [x] **VALID-06**: Multi-signal finding validation - require 2+ independent indicators for CONFIRMED confidence
 
 ### Adaptive Test Execution
 
@@ -38,7 +38,7 @@ Requirements for adaptive enhancement release. Each maps to roadmap phases.
 - [x] **RPT-02**: Capture evidence for aggregate findings (multi-endpoint tests)
 - [x] **RPT-03**: Escape HTML output to prevent XSS in reports
 - [x] **RPT-04**: Deduplicate findings (same title + endpoint)
-- [ ] **RPT-05**: Classify findings with confidence levels (CONFIRMED/LIKELY/UNCERTAIN based on validation certainty)
+- [x] **RPT-05**: Classify findings with confidence levels (CONFIRMED/LIKELY/UNCERTAIN based on validation certainty)
 
 ### Known Issue Fixes
 
@@ -88,8 +88,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VALID-02 | Phase 2: Response Pattern Learning | Complete |
 | VALID-03 | Phase 3: Endpoint Classification | Complete |
 | VALID-04 | Phase 4: Prerequisite-Aware Testing | Complete |
-| VALID-05 | Phase 7: Advanced Validation & Confidence | Pending |
-| VALID-06 | Phase 7: Advanced Validation & Confidence | Pending |
+| VALID-05 | Phase 7: Advanced Validation & Confidence | Complete |
+| VALID-06 | Phase 7: Advanced Validation & Confidence | Complete |
 | TEST-01 | Phase 6: Adaptive Test Execution | Complete |
 | TEST-02 | Phase 6: Adaptive Test Execution | Complete |
 | TEST-03 | Phase 6: Adaptive Test Execution | Complete |
@@ -98,7 +98,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RPT-02 | Phase 1: Evidence & Report Quality | Complete |
 | RPT-03 | Phase 1: Evidence & Report Quality | Complete |
 | RPT-04 | Phase 1: Evidence & Report Quality | Complete |
-| RPT-05 | Phase 7: Advanced Validation & Confidence | Pending |
+| RPT-05 | Phase 7: Advanced Validation & Confidence | Complete |
 | FIX-01 | Phase 2: Response Pattern Learning | Complete |
 | FIX-02 | Phase 3: Endpoint Classification | Complete |
 | FIX-03 | Phase 3: Endpoint Classification | Complete |
@@ -113,4 +113,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-04*
-*Last updated: 2026-02-05 after Phase 6 completion*
+*Last updated: 2026-02-05 after Phase 7 completion (milestone complete)*
