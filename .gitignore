@@ -20,3 +20,6 @@ __pycache__/
 
 # Generated docs
 .planning/codebase/
+
+# Large wordlists (download on demand)
+wordlists/routes-large.kite
