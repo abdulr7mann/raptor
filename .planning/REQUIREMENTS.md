@@ -9,12 +9,12 @@ Requirements for adaptive enhancement release. Each maps to roadmap phases.
 
 ### Discovery & Learning
 
-- [ ] **DISC-01**: Probe API to detect authentication scheme (Bearer, API key, OAuth2, session cookies, custom headers)
+- [x] **DISC-01**: Probe API to detect authentication scheme (Bearer, API key, OAuth2, session cookies, custom headers)
 - [x] **DISC-02**: Analyze response patterns to identify success/failure indicators (status codes, body structure, error formats)
 - [x] **DISC-03**: Classify endpoints as public vs protected using OpenAPI security definitions
-- [ ] **DISC-04**: Detect API architecture type (REST, GraphQL, gRPC, hybrid)
-- [ ] **DISC-05**: Build API profile capturing auth scheme, response patterns, endpoint classification, architecture
-- [ ] **DISC-06**: GraphQL schema introspection - discover full schema via `__schema` query or Clairvoyance-style probing
+- [x] **DISC-04**: Detect API architecture type (REST, GraphQL, gRPC, hybrid)
+- [x] **DISC-05**: Build API profile capturing auth scheme, response patterns, endpoint classification, architecture
+- [x] **DISC-06**: GraphQL schema introspection - discover full schema via `__schema` query or Clairvoyance-style probing
 
 ### Intelligent Validation
 
@@ -78,12 +78,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DISC-01 | Phase 5: API Discovery & Profiling | Pending |
+| DISC-01 | Phase 5: API Discovery & Profiling | Complete |
 | DISC-02 | Phase 2: Response Pattern Learning | Complete |
 | DISC-03 | Phase 3: Endpoint Classification | Complete |
-| DISC-04 | Phase 5: API Discovery & Profiling | Pending |
-| DISC-05 | Phase 5: API Discovery & Profiling | Pending |
-| DISC-06 | Phase 5: API Discovery & Profiling | Pending |
+| DISC-04 | Phase 5: API Discovery & Profiling | Complete |
+| DISC-05 | Phase 5: API Discovery & Profiling | Complete |
+| DISC-06 | Phase 5: API Discovery & Profiling | Complete |
 | VALID-01 | Phase 3: Endpoint Classification | Complete |
 | VALID-02 | Phase 2: Response Pattern Learning | Complete |
 | VALID-03 | Phase 3: Endpoint Classification | Complete |
@@ -113,4 +113,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-04*
-*Last updated: 2026-02-04 after Phase 4 completion*
+*Last updated: 2026-02-05 after Phase 5 completion*

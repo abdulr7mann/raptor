@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Response Pattern Learning** - Learn API success/failure indicators to eliminate HTTP 200 + fail body false positives
 - [x] **Phase 3: Endpoint Classification** - Classify public vs protected endpoints and detect endpoint purpose to eliminate auth-related false positives
 - [x] **Phase 4: Prerequisite-Aware Testing** - Check preconditions before running tests to eliminate nonsensical test false positives
-- [ ] **Phase 5: API Discovery & Profiling** - Probe APIs to detect auth scheme, architecture, and build unified API profile
+- [x] **Phase 5: API Discovery & Profiling** - Probe APIs to detect auth scheme, architecture, and build unified API profile
 - [ ] **Phase 6: Adaptive Test Execution** - Select and adjust tests based on API profile for intelligent, targeted scanning
 - [ ] **Phase 7: Advanced Validation & Confidence** - Baseline comparison, multi-signal validation, and confidence-level classification of findings
 
@@ -92,8 +92,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md -- Build AuthDetector, ArchitectureDetector, and RequestBudget for auth scheme and architecture detection
-- [ ] 05-02-PLAN.md -- Build ApiProfiler with profile persistence and wire discovery into runner
+- [x] 05-01-PLAN.md -- Build AuthDetector, ArchitectureDetector, and RequestBudget for auth scheme and architecture detection
+- [x] 05-02-PLAN.md -- Build ApiProfiler with profile persistence and wire discovery into runner
 
 ### Phase 6: Adaptive Test Execution
 **Goal**: The toolkit uses the API profile to select only relevant tests for each endpoint and adjusts test parameters to match the target API
@@ -134,6 +134,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 2. Response Pattern Learning | 2/2 | Complete | 2026-02-04 |
 | 3. Endpoint Classification | 2/2 | Complete | 2026-02-04 |
 | 4. Prerequisite-Aware Testing | 2/2 | Complete | 2026-02-04 |
-| 5. API Discovery & Profiling | 0/2 | Planned | - |
+| 5. API Discovery & Profiling | 2/2 | Complete | 2026-02-05 |
 | 6. Adaptive Test Execution | 0/TBD | Not started | - |
 | 7. Advanced Validation & Confidence | 0/TBD | Not started | - |
