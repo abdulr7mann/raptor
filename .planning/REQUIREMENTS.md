@@ -27,10 +27,10 @@ Requirements for adaptive enhancement release. Each maps to roadmap phases.
 
 ### Adaptive Test Execution
 
-- [ ] **TEST-01**: Select relevant tests based on API profile (skip GraphQL injection on REST APIs)
-- [ ] **TEST-02**: Adjust test parameters based on discovered patterns (use correct auth headers, success criteria)
-- [ ] **TEST-03**: Handle diverse response formats (JSON, XML, plain text, binary)
-- [ ] **TEST-04**: Test relevance scoring - score test-to-endpoint relevance, skip below threshold
+- [x] **TEST-01**: Select relevant tests based on API profile (skip GraphQL injection on REST APIs)
+- [x] **TEST-02**: Adjust test parameters based on discovered patterns (use correct auth headers, success criteria)
+- [x] **TEST-03**: Handle diverse response formats (JSON, XML, plain text, binary)
+- [x] **TEST-04**: Test relevance scoring - score test-to-endpoint relevance, skip below threshold
 
 ### Evidence & Reporting
 
@@ -90,10 +90,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VALID-04 | Phase 4: Prerequisite-Aware Testing | Complete |
 | VALID-05 | Phase 7: Advanced Validation & Confidence | Pending |
 | VALID-06 | Phase 7: Advanced Validation & Confidence | Pending |
-| TEST-01 | Phase 6: Adaptive Test Execution | Pending |
-| TEST-02 | Phase 6: Adaptive Test Execution | Pending |
-| TEST-03 | Phase 6: Adaptive Test Execution | Pending |
-| TEST-04 | Phase 6: Adaptive Test Execution | Pending |
+| TEST-01 | Phase 6: Adaptive Test Execution | Complete |
+| TEST-02 | Phase 6: Adaptive Test Execution | Complete |
+| TEST-03 | Phase 6: Adaptive Test Execution | Complete |
+| TEST-04 | Phase 6: Adaptive Test Execution | Complete |
 | RPT-01 | Phase 1: Evidence & Report Quality | Complete |
 | RPT-02 | Phase 1: Evidence & Report Quality | Complete |
 | RPT-03 | Phase 1: Evidence & Report Quality | Complete |
@@ -113,4 +113,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-04*
-*Last updated: 2026-02-05 after Phase 5 completion*
+*Last updated: 2026-02-05 after Phase 6 completion*

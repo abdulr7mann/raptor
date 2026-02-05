@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Endpoint Classification** - Classify public vs protected endpoints and detect endpoint purpose to eliminate auth-related false positives
 - [x] **Phase 4: Prerequisite-Aware Testing** - Check preconditions before running tests to eliminate nonsensical test false positives
 - [x] **Phase 5: API Discovery & Profiling** - Probe APIs to detect auth scheme, architecture, and build unified API profile
-- [ ] **Phase 6: Adaptive Test Execution** - Select and adjust tests based on API profile for intelligent, targeted scanning
+- [x] **Phase 6: Adaptive Test Execution** - Select and adjust tests based on API profile for intelligent, targeted scanning
 - [ ] **Phase 7: Advanced Validation & Confidence** - Baseline comparison, multi-signal validation, and confidence-level classification of findings
 
 ## Phase Details
@@ -107,9 +107,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 06-01-PLAN.md -- Build ScenarioApplicability dataclass, ResponseFormatHandler, and RelevanceCalculator
-- [ ] 06-02-PLAN.md -- Add APPLICABILITY declarations to BaseScenario and all 13 scenarios
-- [ ] 06-03-PLAN.md -- Wire applicability filtering into runner, add --relevance-threshold and --fast CLI flags
+- [x] 06-01-PLAN.md -- Build ScenarioApplicability dataclass, ResponseFormatHandler, and RelevanceCalculator
+- [x] 06-02-PLAN.md -- Add APPLICABILITY declarations to BaseScenario and all 13 scenarios
+- [x] 06-03-PLAN.md -- Wire applicability filtering into runner, add --relevance-threshold and --fast CLI flags
 
 ### Phase 7: Advanced Validation & Confidence
 **Goal**: Findings carry confidence levels backed by multiple validation signals, so users can distinguish confirmed vulnerabilities from uncertain indicators
@@ -137,5 +137,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 3. Endpoint Classification | 2/2 | Complete | 2026-02-04 |
 | 4. Prerequisite-Aware Testing | 2/2 | Complete | 2026-02-04 |
 | 5. API Discovery & Profiling | 2/2 | Complete | 2026-02-05 |
-| 6. Adaptive Test Execution | 0/3 | Not started | - |
+| 6. Adaptive Test Execution | 3/3 | Complete | 2026-02-05 |
 | 7. Advanced Validation & Confidence | 0/TBD | Not started | - |
