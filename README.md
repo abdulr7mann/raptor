@@ -104,4 +104,18 @@ Reports are generated in HTML and JSON formats with:
 ## Requirements
 
 - Python 3.10+
-- Optional: [Kiterunner](https://github.com/assetnote/kiterunner) for endpoint fuzzing in spec-less mode
+
+### Kiterunner (Auto-installed)
+
+For spec-less mode, Raptor uses [Kiterunner](https://github.com/assetnote/kiterunner) for intelligent endpoint discovery.
+
+**Kiterunner is auto-installed** when you run spec-less mode (`--url`) for the first time. No manual setup needed.
+
+- Binary is downloaded to `~/.local/bin/`
+- Wordlists are fetched remotely from Assetnote CDN (no local download)
+- Falls back to built-in wordlist if installation fails
+
+Manual install (optional):
+```bash
+python scripts/setup_kiterunner.py
+```
