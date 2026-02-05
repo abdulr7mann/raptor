@@ -15,6 +15,10 @@ Requirements for adaptive enhancement release. Each maps to roadmap phases.
 - [x] **DISC-04**: Detect API architecture type (REST, GraphQL, gRPC, hybrid)
 - [x] **DISC-05**: Build API profile capturing auth scheme, response patterns, endpoint classification, architecture
 - [x] **DISC-06**: GraphQL schema introspection - discover full schema via `__schema` query or Clairvoyance-style probing
+- [x] **DISC-07**: Auto-discover API specs at common paths (/openapi.json, /swagger.json, /api-docs, /graphql) when --url provided
+- [x] **DISC-08**: Integrate Kiterunner for spec discovery and endpoint fuzzing with API-aware wordlists
+- [x] **DISC-09**: Support --url mode (auto-discover) as alternative to --input mode (spec provided)
+- [x] **DISC-10**: Graceful fallback to built-in wordlist when Kiterunner binary not installed
 
 ### Intelligent Validation
 
@@ -49,11 +53,14 @@ Requirements for adaptive enhancement release. Each maps to roadmap phases.
 - [x] **FIX-05**: Add missing endpoint field to aggregate findings (9 findings - S01, S02, S05, S11)
 - [x] **FIX-06**: Add missing evidence to aggregate findings (15 findings - S01, S02, S05, S11)
 
-## v2 Requirements
+## v2 Requirements (Phase 8)
 
-Deferred to future release. Tracked but not in current roadmap.
+Spec-less auto-discovery enhancement. Enables pentesting with just URL + credentials.
 
-(None - all features scoped to v1)
+- [x] **DISC-07**: Auto-discover API specs at common paths when --url provided
+- [x] **DISC-08**: Integrate Kiterunner for spec discovery and endpoint fuzzing
+- [x] **DISC-09**: Support --url mode as alternative to --input mode
+- [x] **DISC-10**: Graceful fallback to built-in wordlist when Kiterunner not installed
 
 ## Out of Scope
 
@@ -105,12 +112,17 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FIX-04 | Phase 4: Prerequisite-Aware Testing | Complete |
 | FIX-05 | Phase 1: Evidence & Report Quality | Complete |
 | FIX-06 | Phase 1: Evidence & Report Quality | Complete |
+| DISC-07 | Phase 8: Spec-less Auto-Discovery | Complete |
+| DISC-08 | Phase 8: Spec-less Auto-Discovery | Complete |
+| DISC-09 | Phase 8: Spec-less Auto-Discovery | Complete |
+| DISC-10 | Phase 8: Spec-less Auto-Discovery | Complete |
 
 **Coverage:**
-- v1 requirements: 31 total
+- v1 requirements: 27 total (complete)
+- v2 requirements: 4 total (complete)
 - Mapped to phases: 31
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-04*
-*Last updated: 2026-02-05 after Phase 7 completion (milestone complete)*
+*Last updated: 2026-02-05 after adding Phase 8 (Spec-less Auto-Discovery)*
