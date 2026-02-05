@@ -64,11 +64,7 @@ Requirements TEST-01, TEST-02, TEST-03, TEST-04 mapped to Phase 6:
 
 ### Anti-Patterns Found
 
-| File | Line | Pattern | Severity | Impact |
-|------|------|---------|----------|--------|
-| api_pentest/scenarios/s08_api_responses.py | N/A | Uses json.loads() directly instead of parse_json_safe() | ℹ️ Info | Minor: Works but bypasses format handler abstraction. Not blocking - existing code predates format handler |
-
-No blocking anti-patterns found. One informational note about direct json.loads usage in S08, but this is existing code that predates the new format handler infrastructure.
+None. S08 has been updated to use `parse_json_safe()` instead of direct `json.loads()`.
 
 ### Human Verification Required
 

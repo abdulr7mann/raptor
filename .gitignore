@@ -1,0 +1,22 @@
+# API specs and configs
+postman.json
+pentest.yaml
+vampi_*.yaml
+vampi_*.json
+
+# Generated outputs
+reports/*
+profiles/
+issues.md
+
+# Test files
+test_*
+playbook
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated docs
+.planning/codebase/
