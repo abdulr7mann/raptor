@@ -120,10 +120,12 @@ Plans:
   2. Findings validated by 2+ independent signals (response diff, error message, timing, structure change) are classified as CONFIRMED
   3. Test responses are compared against baseline responses and findings identical to normal behavior are downgraded or suppressed
   4. Users can filter the report by confidence level to focus on high-certainty findings first
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 07-01: TBD
+- [ ] 07-01-PLAN.md -- Build ConfidenceLevel enum, extend Finding model, create BaselineComparator and FindingValidator
+- [ ] 07-02-PLAN.md -- Wire FindingValidator into ResponsePatternLearner, BaseScenario, and Runner
+- [ ] 07-03-PLAN.md -- Update HTML report with confidence badges, explanations, and filter dropdown
 
 ## Progress
 
