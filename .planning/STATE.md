@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-04)
 ## Current Position
 
 Phase: 8 of 8 (Spec-less Auto Discovery)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-02-05 -- Completed 08-01-PLAN.md
+Last activity: 2026-02-05 -- Completed 08-02-PLAN.md
 
-Progress: [##########] 100% + Phase 8 (17/19 plans complete)
+Progress: [##########] 100% + Phase 8 (18/19 plans complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 17
+- Total plans completed: 18
 - Average duration: 3.5min
-- Total execution time: 64min
+- Total execution time: 68min
 
 **By Phase:**
 
@@ -34,10 +34,10 @@ Progress: [##########] 100% + Phase 8 (17/19 plans complete)
 | 05-api-discovery-profiling | 2/2 | 9min | 4.5min |
 | 06-adaptive-test-execution | 3/3 | 16min | 5.3min |
 | 07-advanced-validation-confidence | 3/3 | 7min | 2.3min |
-| 08-spec-less-auto-discovery | 1/3 | 2min | 2min |
+| 08-spec-less-auto-discovery | 2/3 | 6min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 08-01 (2min), 07-03 (2min), 07-02 (3min), 07-01 (2min), 06-03 (5min)
+- Last 5 plans: 08-02 (4min), 08-01 (2min), 07-03 (2min), 07-02 (3min), 07-01 (2min)
 - Trend: stable at 2-5min/plan
 
 *Updated after each plan completion*
@@ -100,6 +100,11 @@ Recent decisions affecting current work:
 - [07-02]: endpoint_key format: '{method}:{url}' matches learner convention.
 - [08-01]: Minimal GraphQL introspection query for detection (full introspection too verbose for discovery).
 - [08-01]: SPEC_PATHS ordered: JSON first, YAML second, GraphQL last (by frequency of use).
+- [08-02]: shutil.which() for binary detection - checks both 'kr' and 'kiterunner' names.
+- [08-02]: NDJSON parsing for Kiterunner output (line-by-line JSON).
+- [08-02]: Conservative PROTECTED classification for all fuzzed endpoints.
+- [08-02]: 289 endpoints in wordlist - exceeds 200 minimum for broad coverage.
+- [08-02]: API response detection uses content-type + body heuristics.
 
 ### Pending Todos
 
@@ -113,5 +118,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-05
-Stopped at: Completed 08-01-PLAN.md
+Stopped at: Completed 08-02-PLAN.md
 Resume file: None
