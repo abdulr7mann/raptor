@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Accuracy -- findings must be real vulnerabilities, not false positives
-**Current focus:** Phase 7: Advanced Validation & Confidence COMPLETE.
+**Current focus:** Phase 8: Spec-less Auto Discovery
 
 ## Current Position
 
-Phase: 7 of 7 (Advanced Validation & Confidence) -- COMPLETE (verified)
-Plan: 3 of 3 in current phase -- COMPLETE
-Status: Milestone complete, all 7 phases verified
-Last activity: 2026-02-05 -- Phase 7 verified, all plans executed
+Phase: 8 of 8 (Spec-less Auto Discovery)
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-02-05 -- Completed 08-01-PLAN.md
 
-Progress: [##########] 100% (16/16 plans complete)
+Progress: [##########] 100% + Phase 8 (17/19 plans complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 16
-- Average duration: 3.6min
-- Total execution time: 62min
+- Total plans completed: 17
+- Average duration: 3.5min
+- Total execution time: 64min
 
 **By Phase:**
 
@@ -34,9 +34,10 @@ Progress: [##########] 100% (16/16 plans complete)
 | 05-api-discovery-profiling | 2/2 | 9min | 4.5min |
 | 06-adaptive-test-execution | 3/3 | 16min | 5.3min |
 | 07-advanced-validation-confidence | 3/3 | 7min | 2.3min |
+| 08-spec-less-auto-discovery | 1/3 | 2min | 2min |
 
 **Recent Trend:**
-- Last 5 plans: 07-03 (2min), 07-02 (3min), 07-01 (2min), 06-03 (5min), 06-02 (4min)
+- Last 5 plans: 08-01 (2min), 07-03 (2min), 07-02 (3min), 07-01 (2min), 06-03 (5min)
 - Trend: stable at 2-5min/plan
 
 *Updated after each plan completion*
@@ -97,6 +98,8 @@ Recent decisions affecting current work:
 - [07-02]: Baselines prefer success_evidence (authenticated) over failure_evidence as reference.
 - [07-02]: Validation only runs when both validator AND evidence are present.
 - [07-02]: endpoint_key format: '{method}:{url}' matches learner convention.
+- [08-01]: Minimal GraphQL introspection query for detection (full introspection too verbose for discovery).
+- [08-01]: SPEC_PATHS ordered: JSON first, YAML second, GraphQL last (by frequency of use).
 
 ### Pending Todos
 
@@ -110,5 +113,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-05
-Stopped at: Milestone complete - all 7 phases executed and verified
-Resume file: None - milestone complete
+Stopped at: Completed 08-01-PLAN.md
+Resume file: None
