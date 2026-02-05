@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-04)
 
 ## Current Position
 
-Phase: 5 of 7 (API Discovery & Profiling)
-Plan: 1 of 2 in current phase -- COMPLETE
-Status: In progress
-Last activity: 2026-02-05 -- Completed 05-01-PLAN.md (Detection Engine)
+Phase: 5 of 7 (API Discovery & Profiling) -- COMPLETE
+Plan: 2 of 2 in current phase -- COMPLETE
+Status: Phase complete
+Last activity: 2026-02-05 -- Completed 05-02-PLAN.md (ApiProfiler)
 
-Progress: [#########.] ~90% (9/10 plans complete)
+Progress: [##########] 100% (10/10 plans complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
-- Average duration: 3min
-- Total execution time: 29min
+- Total plans completed: 10
+- Average duration: 3.4min
+- Total execution time: 34min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [#########.] ~90% (9/10 plans complete)
 | 02-response-pattern-learning | 2/2 | 6min | 3min |
 | 03-endpoint-classification | 2/2 | 6min | 3min |
 | 04-prerequisite-aware-testing | 2/2 | 5min | 2.5min |
-| 05-api-discovery-profiling | 1/2 | 4min | 4min |
+| 05-api-discovery-profiling | 2/2 | 9min | 4.5min |
 
 **Recent Trend:**
-- Last 5 plans: 05-01 (4min), 04-02 (2min), 04-01 (3min), 03-02 (3min), 03-01 (3min)
-- Trend: stable at 3min/plan
+- Last 5 plans: 05-02 (5min), 05-01 (4min), 04-02 (2min), 04-01 (3min), 03-02 (3min)
+- Trend: stable at 3-4min/plan
 
 *Updated after each plan completion*
 
@@ -75,6 +75,9 @@ Recent decisions affecting current work:
 - [05-01]: GraphQL introspection POST allowed as read-only exception to no-mutation rule.
 - [05-01]: WWW-Authenticate parser uses simple regex matching for known schemes (Bearer, Basic, OAuth).
 - [05-01]: RequestBudget shared across all detection subsystems with 30-request default cap.
+- [05-02]: Profile version check rejects incompatible cached profiles (forces re-discovery).
+- [05-02]: Discovery step runs after prerequisites and before scenario loop in runner.
+- [05-02]: Target name derived from input_file stem or base_url hostname for profile files.
 
 ### Pending Todos
 
@@ -88,5 +91,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-05
-Stopped at: Completed 05-01-PLAN.md. Phase 5 Plan 02 (ApiProfiler) ready.
+Stopped at: Completed 05-02-PLAN.md. Phase 5 complete. Ready for Phase 6 (Adaptive Test Execution).
 Resume file: None
