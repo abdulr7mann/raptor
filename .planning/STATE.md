@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Accuracy -- findings must be real vulnerabilities, not false positives
-**Current focus:** Phase 5 complete and verified. Phase 6: Adaptive Test Execution next.
+**Current focus:** Phase 6: Adaptive Test Execution in progress.
 
 ## Current Position
 
-Phase: 5 of 7 (API Discovery & Profiling) -- COMPLETE (verified)
-Plan: 2 of 2 in current phase -- COMPLETE
-Status: Phase complete, verified 8/8 must-haves
-Last activity: 2026-02-05 -- Phase 5 verified, all plans executed
+Phase: 6 of 7 (Adaptive Test Execution)
+Plan: 1 of 2 in current phase -- COMPLETE
+Status: In progress
+Last activity: 2026-02-05 -- Completed 06-01-PLAN.md (Core Infrastructure)
 
-Progress: [#######...] ~71% (5/7 phases complete)
+Progress: [########..] ~78% (5.5/7 phases complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: 3.4min
-- Total execution time: 34min
+- Total plans completed: 11
+- Average duration: 3.7min
+- Total execution time: 41min
 
 **By Phase:**
 
@@ -32,10 +32,11 @@ Progress: [#######...] ~71% (5/7 phases complete)
 | 03-endpoint-classification | 2/2 | 6min | 3min |
 | 04-prerequisite-aware-testing | 2/2 | 5min | 2.5min |
 | 05-api-discovery-profiling | 2/2 | 9min | 4.5min |
+| 06-adaptive-test-execution | 1/2 | 7min | 7min |
 
 **Recent Trend:**
-- Last 5 plans: 05-02 (5min), 05-01 (4min), 04-02 (2min), 04-01 (3min), 03-02 (3min)
-- Trend: stable at 3-4min/plan
+- Last 5 plans: 06-01 (7min), 05-02 (5min), 05-01 (4min), 04-02 (2min), 04-01 (3min)
+- Trend: stable at 3-5min/plan
 
 *Updated after each plan completion*
 
@@ -78,6 +79,10 @@ Recent decisions affecting current work:
 - [05-02]: Profile version check rejects incompatible cached profiles (forces re-discovery).
 - [05-02]: Discovery step runs after prerequisites and before scenario loop in runner.
 - [05-02]: Target name derived from input_file stem or base_url hostname for profile files.
+- [06-01]: ApplicabilityMode enum with ANY/ALL/EXCLUDE for flexible matching.
+- [06-01]: Weighted scoring: architecture 0.4, classification 0.3, prerequisite 0.3.
+- [06-01]: Default threshold 0.3 allows tests with at least one dimension match.
+- [06-01]: defusedxml for XXE-protected XML parsing in ResponseFormatHandler.
 
 ### Pending Todos
 
@@ -91,5 +96,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-05
-Stopped at: Phase 5 complete and verified. Phase 6 (Adaptive Test Execution) ready.
+Stopped at: Completed 06-01-PLAN.md. Plan 06-02 next.
 Resume file: None
