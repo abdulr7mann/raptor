@@ -83,6 +83,9 @@ Recent decisions affecting current work:
 - [06-01]: Weighted scoring: architecture 0.4, classification 0.3, prerequisite 0.3.
 - [06-01]: Default threshold 0.3 allows tests with at least one dimension match.
 - [06-01]: defusedxml for XXE-protected XML parsing in ResponseFormatHandler.
+- [06-02]: S03 IDOR excludes GraphQL (different pattern for object references).
+- [06-02]: S08 API Responses excludes auth-endpoint (returns credentials by design).
+- [06-02]: api_profile.content_types_observed used for content-type adaptation.
 - [06-03]: Pre-filtered endpoints passed to scenario.setup() rather than letting scenarios filter internally.
 - [06-03]: Skipped test output limited to first 3 per scenario to avoid log spam.
 - [06-03]: Fast mode sets threshold to max(0.6, current) for quicker scans.
