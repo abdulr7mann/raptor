@@ -94,9 +94,9 @@ Recent decisions affecting current work:
 - [07-01]: Categorical threshold: 2+ signals CONFIRMED, 1 LIKELY, 0 UNCERTAIN.
 - [07-01]: Dynamic value patterns: ISO timestamps, UUIDs, Unix timestamps (10-13 digits).
 - [07-01]: Timing anomaly threshold: 3x baseline response time.
-- [07-03]: Badge colors: green CONFIRMED, yellow LIKELY, gray UNCERTAIN.
-- [07-03]: Filter options: All, CONFIRMED only, CONFIRMED + LIKELY.
-- [07-03]: Sort order: severity first, confidence second.
+- [07-02]: Baselines prefer success_evidence (authenticated) over failure_evidence as reference.
+- [07-02]: Validation only runs when both validator AND evidence are present.
+- [07-02]: endpoint_key format: '{method}:{url}' matches learner convention.
 
 ### Pending Todos
 
@@ -110,5 +110,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-05
-Stopped at: Completed 07-03-PLAN.md (Report Confidence Display)
+Stopped at: Completed 07-02-PLAN.md (Validation Pipeline Integration)
 Resume file: None - all phases complete
