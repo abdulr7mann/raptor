@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-04)
 
 **Core value:** Accuracy -- findings must be real vulnerabilities, not false positives
-**Current focus:** Phase 6: Adaptive Test Execution in progress.
+**Current focus:** Phase 6: Adaptive Test Execution COMPLETE.
 
 ## Current Position
 
 Phase: 6 of 7 (Adaptive Test Execution)
-Plan: 1 of 2 in current phase -- COMPLETE
-Status: In progress
-Last activity: 2026-02-05 -- Completed 06-01-PLAN.md (Core Infrastructure)
+Plan: 2 of 2 in current phase -- COMPLETE
+Status: Phase complete
+Last activity: 2026-02-05 -- Completed 06-03-PLAN.md (Runner Integration)
 
-Progress: [########..] ~78% (5.5/7 phases complete)
+Progress: [#########.] ~86% (6/7 phases complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
-- Average duration: 3.7min
-- Total execution time: 41min
+- Total plans completed: 13
+- Average duration: 3.8min
+- Total execution time: 53min
 
 **By Phase:**
 
@@ -32,11 +32,11 @@ Progress: [########..] ~78% (5.5/7 phases complete)
 | 03-endpoint-classification | 2/2 | 6min | 3min |
 | 04-prerequisite-aware-testing | 2/2 | 5min | 2.5min |
 | 05-api-discovery-profiling | 2/2 | 9min | 4.5min |
-| 06-adaptive-test-execution | 1/2 | 7min | 7min |
+| 06-adaptive-test-execution | 2/2 | 12min | 6min |
 
 **Recent Trend:**
-- Last 5 plans: 06-01 (7min), 05-02 (5min), 05-01 (4min), 04-02 (2min), 04-01 (3min)
-- Trend: stable at 3-5min/plan
+- Last 5 plans: 06-03 (5min), 06-01 (7min), 05-02 (5min), 05-01 (4min), 04-02 (2min)
+- Trend: stable at 4-6min/plan
 
 *Updated after each plan completion*
 
@@ -83,6 +83,9 @@ Recent decisions affecting current work:
 - [06-01]: Weighted scoring: architecture 0.4, classification 0.3, prerequisite 0.3.
 - [06-01]: Default threshold 0.3 allows tests with at least one dimension match.
 - [06-01]: defusedxml for XXE-protected XML parsing in ResponseFormatHandler.
+- [06-03]: Pre-filtered endpoints passed to scenario.setup() rather than letting scenarios filter internally.
+- [06-03]: Skipped test output limited to first 3 per scenario to avoid log spam.
+- [06-03]: Fast mode sets threshold to max(0.6, current) for quicker scans.
 
 ### Pending Todos
 
@@ -96,5 +99,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-05
-Stopped at: Completed 06-01-PLAN.md. Plan 06-02 next.
+Stopped at: Completed 06-03-PLAN.md. Phase 6 complete. Ready for Phase 7.
 Resume file: None
