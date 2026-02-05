@@ -23,3 +23,4 @@ __pycache__/
 
 # Large wordlists (download on demand)
 wordlists/routes-large.kite
+url.list
